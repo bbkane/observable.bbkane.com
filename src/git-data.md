@@ -6,6 +6,10 @@ title: Ben's Git Data
 import * as Inputs from "npm:@observablehq/inputs";
 ```
 
+```js
+import {commitDays} from "./components/commitdays.js";
+```
+
 # Git Data
 
 ```js
@@ -18,8 +22,10 @@ Last updated ${todayFormatted}
 
 ```js
 const gitCommits = FileAttachment("data/git-commits.csv").csv({typed: true})
+// const gitCommitsCells =
 ```
 
 ```js
 Inputs.table(gitCommits)
 ```
+

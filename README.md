@@ -51,3 +51,15 @@ A typical Framework project looks like this:
 | `npm run deploy`     | Deploy your project to Observable                        |
 | `npm run clean`      | Clear the local data loader cache                        |
 | `npm run observable` | Run commands like `observable help`                      |
+
+# Ben Notes
+
+Currently trying to get TypeScript working. See https://github.com/observablehq/framework/pull/1632/files
+
+OK, I think updating fixes it, need to test when I have more time.
+
+```
+npm update @observablehq/framework
+```
+
+Then try the plot!
