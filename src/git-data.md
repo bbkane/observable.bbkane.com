@@ -7,7 +7,7 @@ import * as Inputs from "npm:@observablehq/inputs";
 ```
 
 ```js
-import {commitDays} from "./components/commitdays.js";
+import {commitDays, daysToCells} from "./components/commitdays.js";
 ```
 
 # Git Data
@@ -29,3 +29,10 @@ const gitCommits = FileAttachment("data/git-commits.csv").csv({typed: true})
 Inputs.table(gitCommits)
 ```
 
+```js
+commitDays(
+    daysToCells(
+        gitCommits.map(obj => new Date(obj.commit_date))
+    )
+);
+```

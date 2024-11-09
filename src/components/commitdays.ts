@@ -6,8 +6,10 @@ type Cell = {
     fill: number
 }
 
+
+
 // TODO: write test for this
-function daysToObjs(days: Date[]): Cell[] {
+export function daysToCells(days: Date[]): Cell[] {
     const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
     // counter is a map of weekday: str -> hour: int -> count: int
