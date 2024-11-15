@@ -44,27 +44,3 @@ export function daysToCells(days: Date[]): Cell[] {
     return data;
 }
 
-export function commitDays(cells: Cell[]) {
-    return Plot.plot({
-        width: 1000,
-        height: 400,
-        marginLeft: 90,
-        marginRight: 10,
-        color: { type: "linear", scheme: "Greens" },
-        x: {
-            type: "band",
-        },
-        y: {
-            domain: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        },
-        marks: [
-            Plot.cell(cells, {
-                x: "x",
-                y: "y",
-                sort: { x: "x", reverse: false, reduce: ([x]) => parseInt(x) },
-                fill: "fill"
-            }),
-            Plot.text(cells, { x: 'x', y: 'y', text: 'fill' })
-        ]
-    })
-}
