@@ -6,8 +6,6 @@ type Cell = {
     fill: number
 }
 
-
-
 // TODO: write test for this
 export function daysToCells(days: Date[]): Cell[] {
     const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -48,9 +46,14 @@ export function daysToCells(days: Date[]): Cell[] {
 
 export function commitDays(cells: Cell[]) {
     return Plot.plot({
+        width: 1000,
+        height: 400,
         marginLeft: 90,
         marginRight: 10,
         color: { type: "linear", scheme: "Greens" },
+        x: {
+            type: "band",
+        },
         y: {
             domain: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         },

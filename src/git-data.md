@@ -29,10 +29,33 @@ const gitCommits = FileAttachment("data/git-commits.csv").csv({typed: true})
 Inputs.table(gitCommits)
 ```
 
+# When I Commit
+
 ```js
-commitDays(
-    daysToCells(
-        gitCommits.map(obj => new Date(obj.commit_date))
-    )
-);
+let data = daysToCells(gitCommits.map(obj => new Date(obj.commit_date)));
+```
+
+```js
+Plot.plot({
+  width: 1000,
+  height: 400,
+  marginLeft: 90,
+  marginRight: 10,
+  color: {type: "linear", scheme: "Greens"},
+  x: {
+    type: "band"
+  },
+  y: {
+    domain: ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+  },
+  marks: [
+    Plot.cell(data, {
+      x: "x",
+      y: "y",
+      sort: {x: "x", reverse: false, reduce: ([x]) => parseInt(x)},
+      fill: "fill"
+    }),
+    Plot.text(data, {x:'x', y:'y',text:'fill'})
+  ]
+})
 ```
