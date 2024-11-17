@@ -1,5 +1,3 @@
-import * as Plot from "npm:@observablehq/plot";
-
 type Cell = {
     x: string,
     y: string,

@@ -2,14 +2,6 @@
 title: Ben's Git Data
 ---
 
-```js
-import * as Inputs from "npm:@observablehq/inputs";
-```
-
-```js
-import {commitDays, daysToCells} from "./components/commitdays.js";
-```
-
 # Git Data
 
 ```js
@@ -18,11 +10,14 @@ const today = new Date();
 const todayFormatted = `${weekdays[today.getDay()]} ${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}`;
 ```
 
-Last updated ${todayFormatted}
+Last updated: ${todayFormatted}
 
 ```js
-const gitCommits = FileAttachment("data/git-commits.csv").csv({typed: true})
-// const gitCommitsCells =
+const gitCommits = FileAttachment("data/git-commits.csv").csv({typed: true});
+```
+
+```js
+import * as Inputs from "npm:@observablehq/inputs";
 ```
 
 ```js
@@ -32,30 +27,17 @@ Inputs.table(gitCommits)
 # When I Commit
 
 ```js
+import {daysToCells} from "./components/commitdays_pure.js";
+```
+
+```js
 let data = daysToCells(gitCommits.map(obj => new Date(obj.commit_date)));
 ```
 
 ```js
-Plot.plot({
-  width: 1000,
-  height: 400,
-  marginLeft: 90,
-  marginRight: 10,
-  color: {type: "linear", scheme: "Greens"},
-  x: {
-    type: "band"
-  },
-  y: {
-    domain: ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-  },
-  marks: [
-    Plot.cell(data, {
-      x: "x",
-      y: "y",
-      sort: {x: "x", reverse: false, reduce: ([x]) => parseInt(x)},
-      fill: "fill"
-    }),
-    Plot.text(data, {x:'x', y:'y',text:'fill'})
-  ]
-})
+import {commitDays} from "./components/commitdays_plot.js";
+```
+
+```js
+commitDays(data)
 ```

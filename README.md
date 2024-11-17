@@ -56,10 +56,12 @@ A typical Framework project looks like this:
 
 Currently trying to get TypeScript working. See https://github.com/observablehq/framework/pull/1632/files
 
-OK, I think updating fixes it, need to test when I have more time.
+Update with:
 
-```
+```bash
 npm update @observablehq/framework
 ```
 
-Then try the plot!
+TypeScript files must be imported with the .js extension and Observable Framework does not typecheck, it just strips the types
+
+See https://github.com/observablehq/framework/blob/main/docs/javascript.md for details, but semicolons matter here. Don't add semicolons to a thing that's supposed to plot!
