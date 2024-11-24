@@ -17,7 +17,7 @@ test('daysToCells()', { skip: false }, async (t) => {
     // Define test cases inside the main test
     const testCases = [
         { name: 'simple', days: [] },
-
+        { name: 'a date', days: [new Date(2024, 10, 23, 21)] },
     ];
     const updateTests = process.env.OBC_UPDATE_TESTS === 'true';
 
