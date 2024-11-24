@@ -73,3 +73,5 @@ Needed to install types to get node types
 ```
 npm i --save-dev @types/node
 ```
+
+I think the reason I'm not getting my CSS is maybe that it thhe response headers show text/html - https://stackoverflow.com/a/67202997/2958070
