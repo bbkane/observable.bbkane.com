@@ -67,3 +67,9 @@ TypeScript files must be imported with the .js extension and Observable Framewor
 See https://github.com/observablehq/framework/blob/main/docs/javascript.md for details, but semicolons matter here. Don't add semicolons to a thing that's supposed to plot!
 
 node --experimental-strip-types  --test src/components/commitdays_pure.test.ts
+
+Needed to install types to get node types
+
+```
+npm i --save-dev @types/node
+```
