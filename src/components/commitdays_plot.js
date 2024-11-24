@@ -20,7 +20,7 @@ export function commitDays(data) {
         sort: { x: "x", reverse: false, reduce: ([x]) => parseInt(x) },
         fill: "fill"
       }),
-      Plot.text(data, { x: 'x', y: 'y', text: 'fill' }),
+      Plot.text(data, { x: 'x', y: 'y', text: 'fill', fill: 'black' }),
     ]
   })
 }

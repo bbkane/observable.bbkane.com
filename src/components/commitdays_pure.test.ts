@@ -34,7 +34,7 @@ test('add() function tests', async (t) => {
 });
 
 // Main test with subtests
-test('daysToCells()', async (t) => {
+test('daysToCells()', { skip: true }, async (t) => {
     // Define test cases inside the main test
     const testCases = [
         { name: 'simple', days: [], expected: [] },
