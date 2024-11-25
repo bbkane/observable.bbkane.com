@@ -11474,6 +11474,7 @@ date,state,stateId,family
 2018-12-03,United States,US,Falcon9
 2018-12-03,United States,US,Falcon9
 2018-12-03,United States,US,Falcon9
+2018-12-03,United States,US,Falcon9
 2018-12-04,Other,F,Other
 2018-12-04,Other,F,Other
 2018-12-05,United States,US,Falcon9
@@ -11793,6 +11794,7 @@ date,state,stateId,family
 2019-06-20,Other,F,Other
 2019-06-20,Other,F,Other
 2019-06-24,China,CN,DF5
+2019-06-25,United States,US,Falcon9
 2019-06-25,United States,US,Falcon9
 2019-06-25,United States,US,Falcon9
 2019-06-25,United States,US,Falcon9
@@ -16360,6 +16362,7 @@ date,state,stateId,family
 2022-05-25,United States,US,Falcon9
 2022-05-25,United States,US,Falcon9
 2022-05-25,United States,US,Falcon9
+2022-05-25,United States,US,Falcon9
 2022-06-02,China,CN,DF5
 2022-06-02,China,CN,DF5
 2022-06-02,China,CN,DF5
@@ -17517,6 +17520,7 @@ date,state,stateId,family
 2022-11-01,United States,US,Falcon9
 2022-11-01,United States,US,Falcon9
 2022-11-01,United States,US,Falcon9
+2022-11-01,United States,US,Falcon9
 2022-11-02,Russia,RU,R-7
 2022-11-03,United States,US,Falcon9
 2022-11-04,Other,NZ,Other
@@ -18664,6 +18668,7 @@ date,state,stateId,family
 2023-04-07,United States,US,Falcon9
 2023-04-07,United States,US,Falcon9
 2023-04-14,Other,F,Other
+2023-04-15,United States,US,Falcon9
 2023-04-15,United States,US,Falcon9
 2023-04-15,United States,US,Falcon9
 2023-04-15,United States,US,Falcon9
@@ -20315,7 +20320,6 @@ date,state,stateId,family
 2023-11-10,United States,US,Falcon9
 2023-11-10,United States,US,Falcon9
 2023-11-10,United States,US,Falcon9
-2023-11-11,United States,US,Falcon9
 2023-11-11,United States,US,Falcon9
 2023-11-11,United States,US,Falcon9
 2023-11-11,United States,US,Falcon9
@@ -22164,3 +22168,589 @@ date,state,stateId,family
 2024-07-12,United States,US,Falcon9
 2024-07-12,United States,US,Falcon9
 2024-07-19,China,CN,DF5
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-27,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-28,United States,US,Falcon9
+2024-07-30,United States,US,Other
+2024-07-30,United States,US,Other
+2024-07-30,United States,US,Other
+2024-08-01,China,CN,DF5
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,United States,US,Falcon9
+2024-08-02,Other,NZ,Other
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-04,United States,US,Falcon9
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-06,China,CN,DF5
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-10,United States,US,Falcon9
+2024-08-11,Other,NZ,Other
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-12,United States,US,Falcon9
+2024-08-15,Russia,RU,R-7
+2024-08-15,United States,US,Falcon9
+2024-08-15,United States,US,Falcon9
+2024-08-16,Other,IN,Other
+2024-08-16,Other,IN,Other
+2024-08-16,China,CN,DF5
+2024-08-16,China,CN,DF5
+2024-08-16,China,CN,DF5
+2024-08-16,China,CN,DF5
+2024-08-16,China,CN,DF5
+2024-08-16,China,CN,DF5
+2024-08-16,China,CN,DF5
+2024-08-16,China,CN,DF5
+2024-08-16,China,CN,DF5
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-16,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-20,United States,US,Falcon9
+2024-08-22,China,CN,DF5
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-28,United States,US,Falcon9
+2024-08-29,China,CN,Other
+2024-08-29,China,CN,Other
+2024-08-29,China,CN,Other
+2024-08-29,China,CN,Other
+2024-08-29,China,CN,Other
+2024-08-29,China,CN,Other
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-08-31,United States,US,Falcon9
+2024-09-03,China,CN,DF5
+2024-09-03,China,CN,DF5
+2024-09-03,China,CN,DF5
+2024-09-03,China,CN,DF5
+2024-09-03,China,CN,DF5
+2024-09-03,China,CN,DF5
+2024-09-05,Other,F,Other
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,United States,US,Falcon9
+2024-09-05,China,CN,DF5
+2024-09-05,China,CN,DF5
+2024-09-05,China,CN,DF5
+2024-09-05,China,CN,DF5
+2024-09-05,China,CN,DF5
+2024-09-05,China,CN,DF5
+2024-09-05,China,CN,DF5
+2024-09-05,China,CN,DF5
+2024-09-05,China,CN,DF5
+2024-09-05,China,CN,DF5
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-06,United States,US,Falcon9
+2024-09-10,United States,US,Falcon9
+2024-09-11,Russia,RU,R-7
+2024-09-12,United States,US,Falcon9
+2024-09-12,United States,US,Falcon9
+2024-09-12,United States,US,Falcon9
+2024-09-12,United States,US,Falcon9
+2024-09-12,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-13,United States,US,Falcon9
+2024-09-14,Other,IR,Other
+2024-09-17,Russia,RU,Other
+2024-09-17,Russia,RU,Other
+2024-09-17,United States,US,Falcon9
+2024-09-17,United States,US,Falcon9
+2024-09-19,China,CN,DF5
+2024-09-19,China,CN,DF5
+2024-09-20,China,CN,DF5
+2024-09-20,China,CN,DF5
+2024-09-20,China,CN,DF5
+2024-09-20,China,CN,DF5
+2024-09-20,China,CN,DF5
+2024-09-20,China,CN,DF5
+2024-09-20,China,CN,Other
+2024-09-20,China,CN,Other
+2024-09-20,China,CN,Other
+2024-09-20,China,CN,Other
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,United States,US,Falcon9
+2024-09-20,Other,NZ,Other
+2024-09-20,Other,NZ,Other
+2024-09-20,Other,NZ,Other
+2024-09-20,Other,NZ,Other
+2024-09-20,Other,NZ,Other
+2024-09-24,China,CN,Other
+2024-09-24,China,CN,Other
+2024-09-24,China,CN,Other
+2024-09-24,China,CN,Other
+2024-09-24,China,CN,Other
+2024-09-24,China,CN,Other
+2024-09-24,China,CN,Other
+2024-09-24,China,CN,Other
+2024-09-24,China,CN,Other
+2024-09-24,China,CN,Other
+2024-09-24,China,CN,Other
+2024-09-24,China,CN,Other
+2024-09-24,China,CN,Other
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-25,United States,US,Falcon9
+2024-09-26,Other,J,Other
+2024-09-27,China,CN,DF5
+2024-09-27,China,CN,DF5
+2024-09-28,United States,US,Falcon9
+2024-10-04,United States,US,Other
+2024-10-07,United States,US,Falcon9
+2024-10-07,United States,US,Falcon9
+2024-10-07,United States,US,Falcon9
+2024-10-10,China,CN,DF5
+2024-10-13,United States,US,Other
+2024-10-14,United States,US,Falcon9
