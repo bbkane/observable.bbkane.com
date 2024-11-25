@@ -27,15 +27,11 @@ Inputs.table(gitCommits)
 # When I Commit
 
 ```js
-import {daysToCells} from "./components/commitdays_pure.js";
+import {daysToCells, commitDays} from "./components/commitdays.js";
 ```
 
 ```js
 let data = daysToCells(gitCommits.map(obj => new Date(obj.commit_date)));
-```
-
-```js
-import {commitDays} from "./components/commitdays_plot.js";
 ```
 
 ```js
