@@ -1,4 +1,4 @@
-import * as Plot from "npm:@observablehq/plot";
+import * as Plot from "@observablehq/plot";
 
 export function commitDays(data) {
   return Plot.plot({
