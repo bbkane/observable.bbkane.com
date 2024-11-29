@@ -12,11 +12,11 @@
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
 <link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.dcdbf18e.css">
 <link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
-<link rel="modulepreload" href="./_observablehq/client.7782eb36.js">
+<link rel="modulepreload" href="./_observablehq/client.314f63c7.js">
 <link rel="modulepreload" href="./_observablehq/runtime.9393ab6d.js">
-<link rel="modulepreload" href="./_observablehq/stdlib.3ee9cb94.js">
-<link rel="modulepreload" href="./_observablehq/stdlib/inputs.7e044bdc.js">
-<link rel="modulepreload" href="./_import/components/commitdays.209e6131.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.25e61025.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.de7c19e5.js">
+<link rel="modulepreload" href="./_import/components/commit_times.cf044624.js">
 <link rel="modulepreload" href="./_node/@observablehq/plot@0.6.16/index.bac1276b.js">
 <link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/407f7a1f.js">
 <link rel="modulepreload" href="./_npm/htl@0.3.1/063eb405.js">
@@ -61,55 +61,44 @@
 <link rel="icon" href="./_file/observable.1af93621.png" type="image/png" sizes="32x32">
 <script type="module">
 
-import {define} from "./_observablehq/client.7782eb36.js";
-import {registerFile} from "./_observablehq/stdlib.3ee9cb94.js";
+import {define} from "./_observablehq/client.314f63c7.js";
+import {registerFile} from "./_observablehq/stdlib.25e61025.js";
 
-registerFile("./data/git-commits.csv", {"name":"./data/git-commits.csv","mimeType":"text/csv","path":"./_file/data/git-commits.f1e3606a.csv","lastModified":1731693736577,"size":6408});
+registerFile("./data/git-commits.csv", {"name":"./data/git-commits.csv","mimeType":"text/csv","path":"./_file/data/git-commits.6575916c.csv","lastModified":1732895588302,"size":102217});
 
-define({id: "d32eca79", outputs: ["weekdays","today","todayFormatted"], body: () => {
-const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-const today = new Date();
-const todayFormatted = `${weekdays[today.getDay()]} ${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}`;
-return {weekdays,today,todayFormatted};
+define({id: "c5949edd", outputs: ["Inputs","commitTimes"], body: async () => {
+const [Inputs, {commitTimes}] = await Promise.all([import("./_observablehq/stdlib/inputs.de7c19e5.js"), import("./_import/components/commit_times.cf044624.js")]);
+
+return {Inputs,commitTimes};
 }});
 
-define({id: "ba29818c", mode: "inline", inputs: ["todayFormatted","display"], body: async (todayFormatted,display) => {
-display(await(
-todayFormatted
-))
-}});
-
-define({id: "14a2bea7", inputs: ["FileAttachment"], outputs: ["gitCommits"], body: (FileAttachment) => {
-const gitCommits = FileAttachment("./data/git-commits.csv").csv({typed: true});
+define({id: "1eb20e12", inputs: ["FileAttachment"], outputs: ["gitCommits"], body: (FileAttachment) => {
+const gitCommits = FileAttachment("./data/git-commits.csv").tsv({typed: true});
 return {gitCommits};
 }});
 
-define({id: "0eff742c", outputs: ["Inputs"], body: async () => {
-const Inputs = await import("./_observablehq/stdlib/inputs.7e044bdc.js");
-
-return {Inputs};
+define({id: "85d158af", inputs: ["view","Inputs"], outputs: ["filteredRepoNames"], body: (view,Inputs) => {
+const filteredRepoNames = view(Inputs.checkbox(
+    ["dotfiles", "envelope", "fling", "grabbit", "journal", "shovel", "starghaze", "warg"],
+    {label: "Repo"},
+));
+return {filteredRepoNames};
 }});
 
-define({id: "d37fa2c3", inputs: ["Inputs","gitCommits","display"], body: async (Inputs,gitCommits,display) => {
+define({id: "19e7f4cf", inputs: ["gitCommits","filteredRepoNames"], outputs: ["filteredCommits"], body: (gitCommits,filteredRepoNames) => {
+const filteredCommits = gitCommits.filter(repo => filteredRepoNames.includes(repo.repo_name));
+return {filteredCommits};
+}});
+
+define({id: "a27ca2a0", inputs: ["Inputs","filteredCommits","display"], body: async (Inputs,filteredCommits,display) => {
 display(await(
-Inputs.table(gitCommits)
+Inputs.table(filteredCommits)
 ))
 }});
 
-define({id: "222669ac", outputs: ["daysToCells","commitDays"], body: async () => {
-const {daysToCells, commitDays} = await import("./_import/components/commitdays.209e6131.js");
-
-return {daysToCells,commitDays};
-}});
-
-define({id: "65c6c007", inputs: ["daysToCells","gitCommits"], outputs: ["data"], body: (daysToCells,gitCommits) => {
-let data = daysToCells(gitCommits.map(obj => new Date(obj.commit_date)));
-return {data};
-}});
-
-define({id: "43f14af1", inputs: ["commitDays","data","display"], body: async (commitDays,data,display) => {
+define({id: "4f973ce4", inputs: ["commitTimes","filteredCommits","display"], body: async (commitTimes,filteredCommits,display) => {
 display(await(
-commitDays(data)
+commitTimes(filteredCommits.map(obj => new Date(obj.commit_time)))
 ))
 }});
 
@@ -140,20 +129,18 @@ commitDays(data)
 </nav>
 </aside>
 <main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block"><!--:c5949edd:--></div>
 <h1 id="git-data" tabindex="-1"><a class="observablehq-header-anchor" href="#git-data">Git Data</a></h1>
-<div class="observablehq observablehq--block"><!--:d32eca79:--></div>
-<p>Last updated: <observablehq-loading></observablehq-loading><!--:ba29818c:--></p>
-<div class="observablehq observablehq--block"><!--:14a2bea7:--></div>
-<div class="observablehq observablehq--block"><!--:0eff742c:--></div>
-<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:d37fa2c3:--></div>
+<div class="observablehq observablehq--block"><!--:1eb20e12:--></div>
+<div class="observablehq observablehq--block"><!--:85d158af:--></div>
+<div class="observablehq observablehq--block"><!--:19e7f4cf:--></div>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:a27ca2a0:--></div>
 <h1 id="when-i-commit" tabindex="-1"><a class="observablehq-header-anchor" href="#when-i-commit">When I Commit</a></h1>
-<div class="observablehq observablehq--block"><!--:222669ac:--></div>
-<div class="observablehq observablehq--block"><!--:65c6c007:--></div>
-<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:43f14af1:--></div>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:4f973ce4:--></div>
 </main>
 <footer id="observablehq-footer">
 <nav><a rel="prev" href="./example-report"><span>Example report</span></a></nav>
-<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-11-25T06:47:09">Nov 25, 2024</a>.</div>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-11-29T07:53:14">Nov 29, 2024</a>.</div>
 </footer>
 </div>
 </body>
