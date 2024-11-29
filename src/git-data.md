@@ -10,7 +10,7 @@ import {commitTimes} from "./components/commit_times.js";
 # Git Data
 
 ```js
-const gitCommits = FileAttachment("data/git-commits.csv").tsv({typed: true});
+const gitCommits = FileAttachment("data/git-commits.tsv").tsv({typed: true});
 ```
 
 ```js
@@ -22,14 +22,17 @@ const filteredRepoNames = view(Inputs.checkbox(
 
 ```js
 const filteredCommits = gitCommits.filter(repo => filteredRepoNames.includes(repo.repo_name));
+const filteredCommitTimes = filteredCommits.map(obj => new Date(obj.commit_time));
 ```
+
+<div class="card" style="max-width: 1000px;">
+    <h2>Days and hours I commit</h2>
+    ${resize((width) => commitTimes(filteredCommitTimes, {width}))}
+</div>
+
+
+# Filtered Data
 
 ```js
 Inputs.table(filteredCommits)
-```
-
-# When I Commit
-
-```js
-commitTimes(filteredCommits.map(obj => new Date(obj.commit_time)))
 ```
