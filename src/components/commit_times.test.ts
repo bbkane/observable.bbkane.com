@@ -9,7 +9,7 @@ import { dirname } from 'node:path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-import { daysToCells } from "./commitdays.ts";
+import { daysToCells } from "./commit_times.ts";
 
 // Main test with subtests
 test('daysToCells()', { skip: false }, async (t) => {

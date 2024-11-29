@@ -4,7 +4,7 @@ title: Ben's Git Data
 
 ```js
 import * as Inputs from "npm:@observablehq/inputs";
-import {commitDays} from "./components/commitdays.js";
+import {commitTimes} from "./components/commit_times.js";
 ```
 
 # Git Data
@@ -20,5 +20,5 @@ Inputs.table(gitCommits)
 # When I Commit
 
 ```js
-commitDays(gitCommits.map(obj => new Date(obj.commit_time)))
+commitTimes(gitCommits.map(obj => new Date(obj.commit_time)))
 ```

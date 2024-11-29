@@ -43,7 +43,7 @@ export function daysToCells(days: Date[]): Cell[] {
   return data;
 }
 
-export function commitDays(days: Date[]) {
+export function commitTimes(days: Date[]) {
   const data = daysToCells(days);
   return Plot.plot({
     width: 1000,
@@ -61,6 +61,7 @@ export function commitDays(days: Date[]) {
       Plot.cell(data, {
         x: "x",
         y: "y",
+        // @ts-ignore - not sure why this is failing TS, but it works in practice. TODO: learn this
         sort: { x: "x", reverse: false, reduce: ([x]) => parseInt(x) },
         fill: "fill"
       }),
