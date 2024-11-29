@@ -73,3 +73,21 @@ export function commitTimes(
     ]
   })
 }
+
+export function projectsOverTime(data: any, {width}: {width?: number} = {}) {
+  return Plot.plot({
+    width: width,
+    title: "Projects over time",
+    color: { legend: true },
+    marks: [
+      Plot.rectY(
+        data,
+        Plot.binX(
+          { y: "count" },
+          { x: "commit_time", fill: "repo_name", tip: true, interval: "3 months" }
+        )
+      ),
+      Plot.ruleY([0])
+    ]
+  })
+}

@@ -75,3 +75,11 @@ npm i --save-dev @types/node
 ```
 
 I think the reason I'm not getting my CSS is maybe that it thhe response headers show text/html - https://stackoverflow.com/a/67202997/2958070
+
+# Commits over time
+
+https://observablehq.com/d/d766ad521dd479d9
+
+For some reason, the observable plot lib doesn't like this? It doesn't like the fill property...
+
+Even though I see it in https://observablehq.com/plot/transforms/bin
