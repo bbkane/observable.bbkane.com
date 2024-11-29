@@ -6,7 +6,8 @@
     "build": "rimraf docs && observable build && printf 'observable.bbkane.com' > docs/CNAME",
     "dev": "observable preview",
     "deploy": "observable deploy",
-    "observable": "observable"
+    "observable": "observable",
+    "test": "node --experimental-strip-types --test"
   },
   "dependencies": {
     "@observablehq/framework": "^1.9.0",
