@@ -8,7 +8,13 @@ import sys
 
 repo_dirs = [
     # "~/Git-GH/observable.bbkane.com",
+    "~/Git-GH/dotfiles",
     "~/Git-GH/envelope",
+    "~/Git-GH/fling",
+    "~/Git-GH/grabbit",
+    "~/Git-GH/journal",
+    "~/Git-GH/shovel",
+    "~/Git-GH/starghaze",
     "~/Git-GH/warg",
 ]
 

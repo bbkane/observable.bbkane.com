@@ -14,11 +14,22 @@ const gitCommits = FileAttachment("data/git-commits.csv").tsv({typed: true});
 ```
 
 ```js
-Inputs.table(gitCommits)
+const filteredRepoNames = view(Inputs.checkbox(
+    ["dotfiles", "envelope", "fling", "grabbit", "journal", "shovel", "starghaze", "warg"],
+    {label: "Repo"},
+));
+```
+
+```js
+const filteredCommits = gitCommits.filter(repo => filteredRepoNames.includes(repo.repo_name));
+```
+
+```js
+Inputs.table(filteredCommits)
 ```
 
 # When I Commit
 
 ```js
-commitTimes(gitCommits.map(obj => new Date(obj.commit_time)))
+commitTimes(filteredCommits.map(obj => new Date(obj.commit_time)))
 ```
