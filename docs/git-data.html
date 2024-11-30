@@ -16,7 +16,7 @@
 <link rel="modulepreload" href="./_observablehq/runtime.9393ab6d.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.25e61025.js">
 <link rel="modulepreload" href="./_observablehq/stdlib/inputs.de7c19e5.js">
-<link rel="modulepreload" href="./_import/components/commit_times.cf044624.js">
+<link rel="modulepreload" href="./_import/components/commit_times.9d3ceb81.js">
 <link rel="modulepreload" href="./_node/@observablehq/plot@0.6.16/index.bac1276b.js">
 <link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/407f7a1f.js">
 <link rel="modulepreload" href="./_npm/htl@0.3.1/063eb405.js">
@@ -64,41 +64,49 @@
 import {define} from "./_observablehq/client.314f63c7.js";
 import {registerFile} from "./_observablehq/stdlib.25e61025.js";
 
-registerFile("./data/git-commits.csv", {"name":"./data/git-commits.csv","mimeType":"text/csv","path":"./_file/data/git-commits.6575916c.csv","lastModified":1732895588302,"size":102217});
+registerFile("./data/git-commits.tsv", {"name":"./data/git-commits.tsv","mimeType":"text/tab-separated-values","path":"./_file/data/git-commits.6575916c.tsv","lastModified":1732937279759,"size":102217});
 
-define({id: "c5949edd", outputs: ["Inputs","commitTimes"], body: async () => {
-const [Inputs, {commitTimes}] = await Promise.all([import("./_observablehq/stdlib/inputs.de7c19e5.js"), import("./_import/components/commit_times.cf044624.js")]);
+define({id: "9b476d9d", outputs: ["Inputs","commitTimes","projectsOverTime"], body: async () => {
+const [Inputs, {commitTimes, projectsOverTime}] = await Promise.all([import("./_observablehq/stdlib/inputs.de7c19e5.js"), import("./_import/components/commit_times.9d3ceb81.js")]);
 
-return {Inputs,commitTimes};
+return {Inputs,commitTimes,projectsOverTime};
 }});
 
-define({id: "1eb20e12", inputs: ["FileAttachment"], outputs: ["gitCommits"], body: (FileAttachment) => {
-const gitCommits = FileAttachment("./data/git-commits.csv").tsv({typed: true});
+define({id: "9802a49f", inputs: ["FileAttachment"], outputs: ["gitCommits"], body: (FileAttachment) => {
+const gitCommits = FileAttachment("./data/git-commits.tsv").tsv({typed: true});
 return {gitCommits};
 }});
 
-define({id: "85d158af", inputs: ["view","Inputs"], outputs: ["filteredRepoNames"], body: (view,Inputs) => {
+define({id: "03a86827", inputs: ["view","Inputs"], outputs: ["allRepoNames","filteredRepoNames"], body: (view,Inputs) => {
+const allRepoNames = ["dotfiles", "envelope", "fling", "grabbit", "journal", "shovel", "starghaze", "warg"];
 const filteredRepoNames = view(Inputs.checkbox(
-    ["dotfiles", "envelope", "fling", "grabbit", "journal", "shovel", "starghaze", "warg"],
-    {label: "Repo"},
+    allRepoNames,
+    {label: "Repo", value: allRepoNames},
 ));
-return {filteredRepoNames};
+return {allRepoNames,filteredRepoNames};
 }});
 
-define({id: "19e7f4cf", inputs: ["gitCommits","filteredRepoNames"], outputs: ["filteredCommits"], body: (gitCommits,filteredRepoNames) => {
+define({id: "0eb25300", inputs: ["gitCommits","filteredRepoNames"], outputs: ["filteredCommits","filteredCommitTimes"], body: (gitCommits,filteredRepoNames) => {
 const filteredCommits = gitCommits.filter(repo => filteredRepoNames.includes(repo.repo_name));
-return {filteredCommits};
+const filteredCommitTimes = filteredCommits.map(obj => new Date(obj.commit_time));
+return {filteredCommits,filteredCommitTimes};
 }});
 
-define({id: "a27ca2a0", inputs: ["Inputs","filteredCommits","display"], body: async (Inputs,filteredCommits,display) => {
+define({id: "74cca89b", mode: "inline", inputs: ["resize","commitTimes","filteredCommitTimes","display"], body: async (resize,commitTimes,filteredCommitTimes,display) => {
 display(await(
-Inputs.table(filteredCommits)
+resize((width) => commitTimes(filteredCommitTimes, {width}))
 ))
 }});
 
-define({id: "4f973ce4", inputs: ["commitTimes","filteredCommits","display"], body: async (commitTimes,filteredCommits,display) => {
+define({id: "16c73f6d", mode: "inline", inputs: ["resize","projectsOverTime","filteredCommits","display"], body: async (resize,projectsOverTime,filteredCommits,display) => {
 display(await(
-commitTimes(filteredCommits.map(obj => new Date(obj.commit_time)))
+resize((width) => projectsOverTime(filteredCommits, {width}))
+))
+}});
+
+define({id: "2a96c891", mode: "inline", inputs: ["Inputs","filteredCommits","display"], body: async (Inputs,filteredCommits,display) => {
+display(await(
+Inputs.table(filteredCommits)
 ))
 }});
 
@@ -122,25 +130,28 @@ commitTimes(filteredCommits.map(obj => new Date(obj.commit_time)))
 <div id="observablehq-center">
 <aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
 <nav>
-<div>Contents</div>
-<ol>
-<li class="observablehq-secondary-link"><a href="#when-i-commit">When I Commit</a></li>
-</ol>
 </nav>
 </aside>
 <main id="observablehq-main" class="observablehq">
-<div class="observablehq observablehq--block"><!--:c5949edd:--></div>
+<div class="observablehq observablehq--block"><!--:9b476d9d:--></div>
 <h1 id="git-data" tabindex="-1"><a class="observablehq-header-anchor" href="#git-data">Git Data</a></h1>
-<div class="observablehq observablehq--block"><!--:1eb20e12:--></div>
-<div class="observablehq observablehq--block"><!--:85d158af:--></div>
-<div class="observablehq observablehq--block"><!--:19e7f4cf:--></div>
-<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:a27ca2a0:--></div>
-<h1 id="when-i-commit" tabindex="-1"><a class="observablehq-header-anchor" href="#when-i-commit">When I Commit</a></h1>
-<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:4f973ce4:--></div>
+<div class="observablehq observablehq--block"><!--:9802a49f:--></div>
+<div class="observablehq observablehq--block"><!--:03a86827:--></div>
+<div class="observablehq observablehq--block"><!--:0eb25300:--></div>
+<div class="card" "="">
+    <observablehq-loading></observablehq-loading><!--:74cca89b:-->
+</div>
+<div class="card">
+    <observablehq-loading></observablehq-loading><!--:16c73f6d:-->
+</div>
+<div class="card">
+    <h2>Raw data</h2>
+    <observablehq-loading></observablehq-loading><!--:2a96c891:-->
+</div>
 </main>
 <footer id="observablehq-footer">
 <nav><a rel="prev" href="./example-report"><span>Example report</span></a></nav>
-<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-11-29T07:53:14">Nov 29, 2024</a>.</div>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-11-29T19:28:42">Nov 29, 2024</a>.</div>
 </footer>
 </div>
 </body>

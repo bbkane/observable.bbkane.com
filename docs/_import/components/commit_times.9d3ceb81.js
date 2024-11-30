@@ -26,14 +26,15 @@ export function daysToCells(days) {
   }
   return data;
 }
-export function commitTimes(days) {
+export function commitTimes(days, { width } = {}) {
   const data = daysToCells(days);
   return Plot.plot({
-    width: 1e3,
-    height: 400,
+    title: "When I commit",
+    width,
+    height: void 0,
     marginLeft: 90,
     marginRight: 10,
-    color: { type: "linear", scheme: "Greens" },
+    color: { type: "linear", scheme: "blues" },
     x: {
       type: "band"
     },
@@ -46,9 +47,28 @@ export function commitTimes(days) {
         y: "y",
         // @ts-ignore - not sure why this is failing TS, but it works in practice. TODO: learn this
         sort: { x: "x", reverse: false, reduce: ([x]) => parseInt(x) },
-        fill: "fill"
+        fill: "fill",
+        tip: true
       }),
       Plot.text(data, { x: "x", y: "y", text: "fill", fill: "black" })
+    ]
+  });
+}
+export function projectsOverTime(data, { width } = {}) {
+  return Plot.plot({
+    width,
+    title: "Projects over time",
+    color: { legend: true },
+    marks: [
+      Plot.rectY(
+        data,
+        Plot.binX(
+          { y: "count" },
+          // @ts-ignore - I'm not sure why TS doesn't like this, it works.
+          { x: "commit_time", fill: "repo_name", tip: true, interval: "3 months" }
+        )
+      ),
+      Plot.ruleY([0])
     ]
   });
 }
