@@ -17,12 +17,15 @@ repo_dirs = [
     "~/Git-GH/starghaze",
     "~/Git-GH/taggedmarks",
     "~/Git-GH/warg",
+    "~/Git-GH/www.bbkane.com",
 ]
 
 writer = csv.writer(sys.stdout, delimiter="\t")
 writer.writerow(["repo_name", "commit_time"])
 for repo_dir in repo_dirs:
     repo_dir = pathlib.Path(repo_dir).expanduser()
+    if not repo_dir.exists():
+        raise SystemError(f"{repo_dir} does not exist")
     res = sp.run(
         ["git", "log", "--format=%ad", "--date=iso8601-strict", "--reverse"],
         check=True,

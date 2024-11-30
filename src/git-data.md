@@ -19,10 +19,14 @@ A small analysis of the projects I work on and how I work on them. Most of these
 - I occasionally travel and I don't think these times represent that.
 - Commits are only taken from the master branch.
 
-That said, I can definitely see patterns, so let's go! Use the checkboxes to filter repos.
+That said, I can definitely see patterns, so let's go! Use the checkboxes to filter repos. For some context, I've can broadly categorize my projects into a few types:
+
+- long term, non-Go: `dotfiles`, `journal`, `www.bbkane.com` - these are writing and configuration and grow with me over years (my dotfiles have been around a decade at this point)
+- shorter term Go CLI tools - these are mostly CLI tools that I make feature complete and then just update dependencies on.
+- the outlier is `warg`, which is 5 years old and written in Go. It's evolved over time because the afore-mentioned CLIs depend on it.
 
 ```js
-const allRepoNames = ["dotfiles", "envelope", "fling", "grabbit", "journal", "shovel", "starghaze", "taggedmarks", "warg"];
+const allRepoNames = ["dotfiles", "envelope", "fling", "grabbit", "journal", "shovel", "starghaze", "taggedmarks", "warg", "www.bbkane.com"];
 const filteredRepoNames = view(Inputs.checkbox(
     allRepoNames,
     {label: "Repo", value: allRepoNames},
@@ -39,9 +43,6 @@ const filteredCommitTimes = filteredCommits.map(obj => new Date(obj.commit_time)
 <div class="card"">
     ${resize((width) => ct.totalCommits(filteredCommits, {width}))}
 </div>
-
-- Most of my projects are in Go, though my two most-committed projects (`dotfiles` and `journal` are not)
-- I've got 1000 commits in my `dotfiles`!
 
 ---
 
