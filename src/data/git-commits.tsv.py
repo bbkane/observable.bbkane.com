@@ -15,6 +15,7 @@ repo_dirs = [
     "~/Git-GH/journal",
     "~/Git-GH/shovel",
     "~/Git-GH/starghaze",
+    "~/Git-GH/taggedmarks",
     "~/Git-GH/warg",
 ]
 

@@ -7,7 +7,7 @@ type Cell = {
 }
 
 export function daysToCells(days: Date[]): Cell[] {
-  const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   // counter is a map of weekday: str -> hour: int -> count: int
   type Counter = Record<string, Record<number, number>>;
@@ -52,14 +52,16 @@ export function commitTimes(
     title: "When I commit",
     width: width,
     height: undefined,
-    marginLeft: 90,
+    marginLeft: 30,
     marginRight: 10,
     color: { type: "linear", scheme: "blues" },
     x: {
-      type: "band"
+      type: "band",
+      label: null,
     },
     y: {
-      domain: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      domain: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      label: null,
     },
     marks: [
       Plot.cell(data, {
@@ -70,6 +72,7 @@ export function commitTimes(
         fill: "fill",
         tip: true,
       }),
+      // Let's keep this commented out for now to be mobile friendly
       Plot.text(data, { x: 'x', y: 'y', text: 'fill', fill: 'black' }),
     ]
   })
