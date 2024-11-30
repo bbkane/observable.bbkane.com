@@ -4,7 +4,7 @@ title: Ben's Git Data
 
 ```js
 import * as Inputs from "npm:@observablehq/inputs";
-import {commitTimes, projectsOverTime} from "./components/commit_times.js";
+import * as ct from "./components/commit_times.js";
 ```
 
 # Git Data
@@ -37,7 +37,16 @@ const filteredCommitTimes = filteredCommits.map(obj => new Date(obj.commit_time)
 ---
 
 <div class="card"">
-    ${resize((width) => commitTimes(filteredCommitTimes, {width}))}
+    ${resize((width) => ct.totalCommits(filteredCommits, {width}))}
+</div>
+
+- Most of my projects are in Go, though my two most-committed projects (`dotfiles` and `journal` are not)
+- I've got 1000 commits in my `dotfiles`!
+
+---
+
+<div class="card"">
+    ${resize((width) => ct.commitTimes(filteredCommitTimes, {width}))}
 </div>
 
 - If viewing on a phone, use the landscape orientation.
@@ -49,7 +58,7 @@ const filteredCommitTimes = filteredCommits.map(obj => new Date(obj.commit_time)
 ---
 
 <div class="card">
-    ${resize((width) => projectsOverTime(filteredCommits, {width}))}
+    ${resize((width) => ct.projectsOverTime(filteredCommits, {width}))}
 </div>
 
 - My dotfiles are 10 years old!

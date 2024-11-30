@@ -96,3 +96,28 @@ export function projectsOverTime(data: any, { width }: { width?: number } = {}) 
     ]
   })
 }
+
+export function totalCommits(data: any, { width }: { width?: number } = {}) {
+  return Plot.plot({
+    width: width,
+    color: { legend: true },
+    marginLeft: 70,
+    x: {
+      label: "total commits",
+    },
+    y: {
+      label: null,
+    },
+    title: "Total Commits",
+    marks: [
+      Plot.barX(
+        data,
+        Plot.groupY(
+          { x: "count" },
+          { y: "repo_name", fill: "repo_name", tip: true }
+        )
+      ),
+      Plot.ruleX([0]),
+    ]
+  })
+}
