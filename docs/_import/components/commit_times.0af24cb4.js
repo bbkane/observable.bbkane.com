@@ -1,6 +1,6 @@
 import * as Plot from "../../_node/@observablehq/plot@0.6.16/index.bac1276b.js";
 export function daysToCells(days) {
-  const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let counter = {};
   for (let i = 0; i < weekday.length; ++i) {
     counter[weekday[i]] = {};
@@ -32,14 +32,16 @@ export function commitTimes(days, { width } = {}) {
     title: "When I commit",
     width,
     height: void 0,
-    marginLeft: 90,
+    marginLeft: 30,
     marginRight: 10,
     color: { type: "linear", scheme: "blues" },
     x: {
-      type: "band"
+      type: "band",
+      label: null
     },
     y: {
-      domain: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+      domain: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      label: null
     },
     marks: [
       Plot.cell(data, {
@@ -50,6 +52,7 @@ export function commitTimes(days, { width } = {}) {
         fill: "fill",
         tip: true
       }),
+      // Let's keep this commented out for now to be mobile friendly
       Plot.text(data, { x: "x", y: "y", text: "fill", fill: "black" })
     ]
   });
