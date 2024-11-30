@@ -12,10 +12,10 @@
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
 <link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.dcdbf18e.css">
 <link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
-<link rel="modulepreload" href="./_observablehq/client.314f63c7.js">
+<link rel="modulepreload" href="./_observablehq/client.7782eb36.js">
 <link rel="modulepreload" href="./_observablehq/runtime.9393ab6d.js">
-<link rel="modulepreload" href="./_observablehq/stdlib.25e61025.js">
-<link rel="modulepreload" href="./_observablehq/stdlib/inputs.de7c19e5.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.3ee9cb94.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.7e044bdc.js">
 <link rel="modulepreload" href="./_import/components/commit_times.7327a9a9.js">
 <link rel="modulepreload" href="./_node/@observablehq/plot@0.6.16/index.bac1276b.js">
 <link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/407f7a1f.js">
@@ -61,13 +61,13 @@
 <link rel="icon" href="./_file/observable.1af93621.png" type="image/png" sizes="32x32">
 <script type="module">
 
-import {define} from "./_observablehq/client.314f63c7.js";
-import {registerFile} from "./_observablehq/stdlib.25e61025.js";
+import {define} from "./_observablehq/client.7782eb36.js";
+import {registerFile} from "./_observablehq/stdlib.3ee9cb94.js";
 
-registerFile("./data/git-commits.tsv", {"name":"./data/git-commits.tsv","mimeType":"text/tab-separated-values","path":"./_file/data/git-commits.39dd348a.tsv","lastModified":1732943955210,"size":110914});
+registerFile("./data/git-commits.tsv", {"name":"./data/git-commits.tsv","mimeType":"text/tab-separated-values","path":"./_file/data/git-commits.c486e5a0.tsv","lastModified":1733004160482,"size":135358});
 
 define({id: "6001b202", outputs: ["Inputs","ct"], body: async () => {
-const [Inputs, ct] = await Promise.all([import("./_observablehq/stdlib/inputs.de7c19e5.js"), import("./_import/components/commit_times.7327a9a9.js")]);
+const [Inputs, ct] = await Promise.all([import("./_observablehq/stdlib/inputs.7e044bdc.js"), import("./_import/components/commit_times.7327a9a9.js")]);
 
 return {Inputs,ct};
 }});
@@ -77,8 +77,8 @@ const gitCommits = FileAttachment("./data/git-commits.tsv").tsv({typed: true});
 return {gitCommits};
 }});
 
-define({id: "32c36bc0", inputs: ["view","Inputs"], outputs: ["allRepoNames","filteredRepoNames"], body: (view,Inputs) => {
-const allRepoNames = ["dotfiles", "envelope", "fling", "grabbit", "journal", "shovel", "starghaze", "taggedmarks", "warg"];
+define({id: "9963d0a6", inputs: ["view","Inputs"], outputs: ["allRepoNames","filteredRepoNames"], body: (view,Inputs) => {
+const allRepoNames = ["dotfiles", "envelope", "fling", "grabbit", "journal", "shovel", "starghaze", "taggedmarks", "warg", "www.bbkane.com"];
 const filteredRepoNames = view(Inputs.checkbox(
     allRepoNames,
     {label: "Repo", value: allRepoNames},
@@ -148,17 +148,18 @@ Inputs.table(filteredCommits)
 <li>I occasionally travel and I don't think these times represent that.</li>
 <li>Commits are only taken from the master branch.</li>
 </ul>
-<p>That said, I can definitely see patterns, so let's go! Use the checkboxes to filter repos.</p>
-<div class="observablehq observablehq--block"><!--:32c36bc0:--></div>
+<p>That said, I can definitely see patterns, so let's go! Use the checkboxes to filter repos. For some context, I've can broadly categorize my projects into a few types:</p>
+<ul>
+<li>long term, non-Go: <code>dotfiles</code>, <code>journal</code>, <code>www.bbkane.com</code> - these are writing and configuration and grow with me over years (my dotfiles have been around a decade at this point)</li>
+<li>shorter term Go CLI tools - these are mostly CLI tools that I make feature complete and then just update dependencies on.</li>
+<li>the outlier is <code>warg</code>, which is 5 years old and written in Go. It's evolved over time because the afore-mentioned CLIs depend on it.</li>
+</ul>
+<div class="observablehq observablehq--block"><!--:9963d0a6:--></div>
 <div class="observablehq observablehq--block"><!--:0eb25300:--></div>
 <hr>
 <div class="card" "="">
     <observablehq-loading></observablehq-loading><!--:1adf3dfa:-->
 </div>
-<ul>
-<li>Most of my projects are in Go, though my two most-committed projects (<code>dotfiles</code> and <code>journal</code> are not)</li>
-<li>I've got 1000 commits in my <code>dotfiles</code>!</li>
-</ul>
 <hr>
 <div class="card" "="">
     <observablehq-loading></observablehq-loading><!--:a757645f:-->
@@ -189,7 +190,7 @@ Inputs.table(filteredCommits)
 </main>
 <footer id="observablehq-footer">
 <nav><a rel="prev" href="./example-report"><span>Example report</span></a></nav>
-<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-11-29T22:28:20">Nov 29, 2024</a>.</div>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-11-30T14:11:20">Nov 30, 2024</a>.</div>
 </footer>
 </div>
 </body>
