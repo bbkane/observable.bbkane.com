@@ -75,3 +75,27 @@ export function projectsOverTime(data, { width } = {}) {
     ]
   });
 }
+export function totalCommits(data, { width } = {}) {
+  return Plot.plot({
+    width,
+    color: { legend: true },
+    marginLeft: 70,
+    x: {
+      label: "total commits"
+    },
+    y: {
+      label: null
+    },
+    title: "Total Commits",
+    marks: [
+      Plot.barX(
+        data,
+        Plot.groupY(
+          { x: "count" },
+          { y: "repo_name", fill: "repo_name", tip: true }
+        )
+      ),
+      Plot.ruleX([0])
+    ]
+  });
+}
