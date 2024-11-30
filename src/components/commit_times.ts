@@ -44,16 +44,17 @@ export function daysToCells(days: Date[]): Cell[] {
 }
 
 export function commitTimes(
-  days: Date[], 
+  days: Date[],
   { width }: { width?: number } = {}
 ) {
   const data = daysToCells(days);
   return Plot.plot({
+    title: "When I commit",
     width: width,
     height: undefined,
     marginLeft: 90,
     marginRight: 10,
-    color: { type: "linear", scheme: "Greens" },
+    color: { type: "linear", scheme: "blues" },
     x: {
       type: "band"
     },
@@ -74,7 +75,7 @@ export function commitTimes(
   })
 }
 
-export function projectsOverTime(data: any, {width}: {width?: number} = {}) {
+export function projectsOverTime(data: any, { width }: { width?: number } = {}) {
   return Plot.plot({
     width: width,
     title: "Projects over time",
@@ -84,6 +85,7 @@ export function projectsOverTime(data: any, {width}: {width?: number} = {}) {
         data,
         Plot.binX(
           { y: "count" },
+          // @ts-ignore - I'm not sure why TS doesn't like this, it works.
           { x: "commit_time", fill: "repo_name", tip: true, interval: "3 months" }
         )
       ),

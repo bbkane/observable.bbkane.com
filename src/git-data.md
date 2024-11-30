@@ -14,9 +14,10 @@ const gitCommits = FileAttachment("data/git-commits.tsv").tsv({typed: true});
 ```
 
 ```js
+const allRepoNames = ["dotfiles", "envelope", "fling", "grabbit", "journal", "shovel", "starghaze", "warg"];
 const filteredRepoNames = view(Inputs.checkbox(
-    ["dotfiles", "envelope", "fling", "grabbit", "journal", "shovel", "starghaze", "warg"],
-    {label: "Repo"},
+    allRepoNames,
+    {label: "Repo", value: allRepoNames},
 ));
 ```
 
@@ -25,19 +26,15 @@ const filteredCommits = gitCommits.filter(repo => filteredRepoNames.includes(rep
 const filteredCommitTimes = filteredCommits.map(obj => new Date(obj.commit_time));
 ```
 
-<div class="card" style="max-width: 1000px;">
-    <h2>Days and hours I commit</h2>
+<div class="card"">
     ${resize((width) => commitTimes(filteredCommitTimes, {width}))}
 </div>
 
-<div class="card" style="max-width: 1000px;">
-    <h2>Commits over time</h2>
+<div class="card">
     ${resize((width) => projectsOverTime(filteredCommits, {width}))}
 </div>
 
-
-# Filtered Data
-
-```js
-Inputs.table(filteredCommits)
-```
+<div class="card">
+    <h2>Raw data</h2>
+    ${Inputs.table(filteredCommits)}
+</div>
