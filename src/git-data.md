@@ -31,10 +31,21 @@ const filteredRepoNames = view(Inputs.checkbox(
     allRepoNames,
     {label: "Repo", value: allRepoNames},
 ));
+const startDateInput = view(Inputs.date({label: "Start Date"}));
+const endDateInput = view(Inputs.date({label: "End Date"}));
 ```
 
 ```js
-const filteredCommits = gitCommits.filter(repo => filteredRepoNames.includes(repo.repo_name));
+const startDate = startDateInput == null ? new Date(0) : startDateInput;
+const endDate = endDateInput == null ? new Date("2500-01-01") : endDateInput;
+```
+
+```js
+const filteredCommits = gitCommits.filter(row => {
+    const rowTime = new Date(row.commit_time);
+
+    return filteredRepoNames.includes(row.repo_name) && rowTime >= startDate && rowTime <= endDate
+});
 const filteredCommitTimes = filteredCommits.map(obj => new Date(obj.commit_time));
 ```
 
