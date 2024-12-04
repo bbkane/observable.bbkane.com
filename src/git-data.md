@@ -69,8 +69,12 @@ const filteredCommitTimes = filteredCommits.map(obj => new Date(obj.commit_time)
 
 ---
 
+```js
+const interval = view(Inputs.select(["day", "week", "month", "3 months"], {value: "3 months", label: "Interval"}));
+```
+
 <div class="card">
-    ${resize((width) => ct.projectsOverTime(filteredCommits, {width}))}
+    ${resize((width) => ct.projectsOverTime(filteredCommits, interval, {width}))}
 </div>
 
 - My dotfiles are 10 years old!
