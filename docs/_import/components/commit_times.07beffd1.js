@@ -57,7 +57,7 @@ export function commitTimes(days, { width } = {}) {
     ]
   });
 }
-export function projectsOverTime(data, { width } = {}) {
+export function projectsOverTime(data, interval, { width } = {}) {
   return Plot.plot({
     width,
     title: "Projects over time",
@@ -68,7 +68,7 @@ export function projectsOverTime(data, { width } = {}) {
         Plot.binX(
           { y: "count" },
           // @ts-ignore - I'm not sure why TS doesn't like this, it works.
-          { x: "commit_time", fill: "repo_name", tip: true, interval: "3 months" }
+          { x: "commit_time", fill: "repo_name", tip: true, interval }
         )
       ),
       Plot.ruleY([0])
@@ -79,7 +79,7 @@ export function totalCommits(data, { width } = {}) {
   return Plot.plot({
     width,
     color: { legend: true },
-    marginLeft: 70,
+    marginLeft: 100,
     x: {
       label: "total commits"
     },
