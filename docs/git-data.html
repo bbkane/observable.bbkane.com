@@ -64,7 +64,7 @@
 import {define} from "./_observablehq/client.7782eb36.js";
 import {registerFile} from "./_observablehq/stdlib.3ee9cb94.js";
 
-registerFile("./data/git-commits.tsv", {"name":"./data/git-commits.tsv","mimeType":"text/tab-separated-values","path":"./_file/data/git-commits.4fac6f03.tsv","lastModified":1733287340406,"size":135442});
+registerFile("./data/git-commits.tsv", {"name":"./data/git-commits.tsv","mimeType":"text/tab-separated-values","path":"./_file/data/git-commits.0237b7db.tsv","lastModified":1734108274294,"size":137674});
 
 define({id: "6001b202", outputs: ["Inputs","ct"], body: async () => {
 const [Inputs, ct] = await Promise.all([import("./_observablehq/stdlib/inputs.7e044bdc.js"), import("./_import/components/commit_times.07beffd1.js")]);
@@ -77,8 +77,8 @@ const gitCommits = FileAttachment("./data/git-commits.tsv").tsv({typed: true});
 return {gitCommits};
 }});
 
-define({id: "005c709f", inputs: ["view","Inputs"], outputs: ["allRepoNames","filteredRepoNames","startDateInput","endDateInput"], body: (view,Inputs) => {
-const allRepoNames = ["dotfiles", "envelope", "fling", "grabbit", "journal", "shovel", "starghaze", "taggedmarks", "warg", "www.bbkane.com"];
+define({id: "d48af066", inputs: ["view","Inputs"], outputs: ["allRepoNames","filteredRepoNames","startDateInput","endDateInput"], body: (view,Inputs) => {
+const allRepoNames = ["dotfiles", "envelope", "fling", "go-zsh-complete", "grabbit", "journal", "shovel", "starghaze", "taggedmarks", "warg", "www.bbkane.com"];
 const filteredRepoNames = view(Inputs.checkbox(
     allRepoNames,
     {label: "Repo", value: allRepoNames},
@@ -169,7 +169,7 @@ Inputs.table(filteredCommits)
 <li>shorter term Go CLI tools - these are mostly CLI tools that I make feature complete and then just update dependencies on.</li>
 <li>the outlier is <code>warg</code>, which is 5 years old and written in Go. It's evolved over time because the afore-mentioned CLIs depend on it.</li>
 </ul>
-<div class="observablehq observablehq--block"><!--:005c709f:--></div>
+<div class="observablehq observablehq--block"><!--:d48af066:--></div>
 <div class="observablehq observablehq--block"><!--:7fe51270:--></div>
 <div class="observablehq observablehq--block"><!--:3ab1f1b5:--></div>
 <hr>
@@ -207,7 +207,7 @@ Inputs.table(filteredCommits)
 </main>
 <footer id="observablehq-footer">
 <nav><a rel="prev" href="./"><span>observable.bbkane.com</span></a></nav>
-<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-12-03T21:56:08">Dec 3, 2024</a>.</div>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-12-13T08:46:49">Dec 13, 2024</a>.</div>
 </footer>
 </div>
 </body>
