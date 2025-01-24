@@ -10,6 +10,7 @@ import * as ct from "./components/commit_times.js";
 # Git Data
 
 ```js
+const repoData = FileAttachment("data/repos.json").json()
 const gitCommits = FileAttachment("data/git-commits.tsv").tsv({typed: true});
 ```
 
@@ -26,7 +27,8 @@ That said, I can definitely see patterns, so let's go! Use the checkboxes to fil
 - the outlier is `warg`, which is 5 years old and written in Go. It's evolved over time because the afore-mentioned CLIs depend on it.
 
 ```js
-const allRepoNames = ["dotfiles", "envelope", "fling", "go-zsh-complete", "grabbit", "journal", "shovel", "starghaze", "taggedmarks", "warg", "www.bbkane.com"];
+const allRepoNames = Object.keys(repoData)
+// const allRepoNames = ["dotfiles", "envelope", "fling", "go-zsh-complete", "grabbit", "journal", "shovel", "starghaze", "taggedmarks", "warg", "www.bbkane.com"];
 const filteredRepoNames = view(Inputs.checkbox(
     allRepoNames,
     {label: "Repo", value: allRepoNames},
