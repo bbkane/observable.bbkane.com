@@ -14,10 +14,13 @@ SCRIPT_DIR = pathlib.Path(os.path.dirname(os.path.realpath(__file__)))
 with open(SCRIPT_DIR / "repos.json") as f:
     repo_data = json.load(f)
 
+missing_repos_dirs = []
+
 for repo_dir in repo_data.values():
     repo_dir = pathlib.Path(repo_dir).expanduser()
     if not repo_dir.exists():
-        raise SystemError(f"{repo_dir} does not exist")
+        missing_repos_dirs.append(repo_dir)
+        continue
     sp.run(
         ["git", "checkout", "master"],
         check=True,
@@ -31,4 +34,9 @@ for repo_dir in repo_data.values():
         cwd=repo_dir,
         encoding="utf-8",
         text=True,
+    )
+
+if missing_repos_dirs:
+    raise SystemError(
+        f"Missing repos: {', '.join(map(str, missing_repos_dirs))}"
     )

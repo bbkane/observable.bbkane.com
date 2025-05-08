@@ -1,6 +1,6 @@
 {
     "dotfiles": "~/Git-GH/dotfiles",
-    "envelope": "~/Git-GH/envelope",
+    "enventory": "~/Git-GH/enventory",
     "fling": "~/Git-GH/fling",
     "go-zsh-complete": "~/Git-GH/go-zsh-complete",
     "grabbit": "~/Git-GH/grabbit",
@@ -9,6 +9,7 @@
     "shovel": "~/Git-GH/shovel",
     "starghaze": "~/Git-GH/starghaze",
     "taggedmarks": "~/Git-GH/taggedmarks",
+    "techjournal": "~/Git-GH/techjournal",
     "toddlerevents": "~/Git-GH/toddlerevents",
     "warg": "~/Git-GH/warg",
     "www.bbkane.com": "~/Git-GH/www.bbkane.com"
