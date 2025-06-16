@@ -65,7 +65,7 @@ import {define} from "./_observablehq/client.7782eb36.js";
 import {registerFile} from "./_observablehq/stdlib.3ee9cb94.js";
 
 registerFile("./data/git-commits.tsv", {"name":"./data/git-commits.tsv","mimeType":"text/tab-separated-values","path":"./_file/data/git-commits.f4f2f756.tsv","lastModified":1737741419369,"size":144027});
-registerFile("./data/repos.json", {"name":"./data/repos.json","mimeType":"application/json","path":"./_file/data/repos.9c3eb746.json","lastModified":1737740905692,"size":505});
+registerFile("./data/repos.json", {"name":"./data/repos.json","mimeType":"application/json","path":"./_file/data/repos.2f90d225.json","lastModified":1750037496344,"size":580});
 
 define({id: "6001b202", outputs: ["Inputs","ct"], body: async () => {
 const [Inputs, ct] = await Promise.all([import("./_observablehq/stdlib/inputs.7e044bdc.js"), import("./_import/components/commit_times.07beffd1.js")]);
@@ -79,9 +79,8 @@ const gitCommits = FileAttachment("./data/git-commits.tsv").tsv({typed: true});
 return {repoData,gitCommits};
 }});
 
-define({id: "3737e135", inputs: ["repoData","view","Inputs"], outputs: ["allRepoNames","filteredRepoNames","startDateInput","endDateInput"], body: (repoData,view,Inputs) => {
+define({id: "5abc79c9", inputs: ["repoData","view","Inputs"], outputs: ["allRepoNames","filteredRepoNames","startDateInput","endDateInput"], body: (repoData,view,Inputs) => {
 const allRepoNames = Object.keys(repoData)
-// const allRepoNames = ["dotfiles", "envelope", "fling", "go-zsh-complete", "grabbit", "journal", "shovel", "starghaze", "taggedmarks", "warg", "www.bbkane.com"];
 const filteredRepoNames = view(Inputs.checkbox(
     allRepoNames,
     {label: "Repo", value: allRepoNames},
@@ -172,7 +171,7 @@ Inputs.table(filteredCommits)
 <li>shorter term Go CLI tools - these are mostly CLI tools that I make feature complete and then just update dependencies on.</li>
 <li>the outlier is <code>warg</code>, which is 5 years old and written in Go. It's evolved over time because the afore-mentioned CLIs depend on it.</li>
 </ul>
-<div class="observablehq observablehq--block"><!--:3737e135:--></div>
+<div class="observablehq observablehq--block"><!--:5abc79c9:--></div>
 <div class="observablehq observablehq--block"><!--:7fe51270:--></div>
 <div class="observablehq observablehq--block"><!--:3ab1f1b5:--></div>
 <hr>
@@ -210,7 +209,7 @@ Inputs.table(filteredCommits)
 </main>
 <footer id="observablehq-footer">
 <nav><a rel="prev" href="./"><span>observable.bbkane.com</span></a></nav>
-<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2025-01-24T10:06:15">Jan 24, 2025</a>.</div>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2025-06-15T18:38:57">Jun 15, 2025</a>.</div>
 </footer>
 </div>
 </body>
