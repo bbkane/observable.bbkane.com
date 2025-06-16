@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="generator" content="Observable Framework v1.13.0">
+<meta name="generator" content="Observable Framework v1.13.3">
 <title>Ben&#x27;s Git Data | observable.bbkane.com</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
@@ -12,12 +12,12 @@
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
 <link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.dcdbf18e.css">
 <link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
-<link rel="modulepreload" href="./_observablehq/client.7782eb36.js">
-<link rel="modulepreload" href="./_observablehq/runtime.9393ab6d.js">
+<link rel="modulepreload" href="./_observablehq/client.2a95501f.js">
+<link rel="modulepreload" href="./_observablehq/runtime.e080113b.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.3ee9cb94.js">
-<link rel="modulepreload" href="./_observablehq/stdlib/inputs.7e044bdc.js">
-<link rel="modulepreload" href="./_import/components/commit_times.07beffd1.js">
-<link rel="modulepreload" href="./_node/@observablehq/plot@0.6.16/index.bac1276b.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.e3eac48a.js">
+<link rel="modulepreload" href="./_import/components/commit_times.49586714.js">
+<link rel="modulepreload" href="./_node/@observablehq/plot@0.6.17/index.716220a9.js">
 <link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/407f7a1f.js">
 <link rel="modulepreload" href="./_npm/htl@0.3.1/063eb405.js">
 <link rel="modulepreload" href="./_npm/isoformat@0.2.1/c68fbd73.js">
@@ -61,14 +61,14 @@
 <link rel="icon" href="./_file/observable.1af93621.png" type="image/png" sizes="32x32">
 <script type="module">
 
-import {define} from "./_observablehq/client.7782eb36.js";
+import {define} from "./_observablehq/client.2a95501f.js";
 import {registerFile} from "./_observablehq/stdlib.3ee9cb94.js";
 
 registerFile("./data/git-commits.csv", {"name":"./data/git-commits.csv","mimeType":"text/csv","path":"./_file/data/git-commits.b67f3ebb.csv","lastModified":1750038393323,"size":154865});
-registerFile("./data/repos.json", {"name":"./data/repos.json","mimeType":"application/json","path":"./_file/data/repos.72b6c0a1.json","lastModified":1750038600121,"size":623});
+registerFile("./data/repos.json", {"name":"./data/repos.json","mimeType":"application/json","path":"./_file/data/repos.4a6253ad.json","lastModified":1750039160270,"size":662});
 
 define({id: "6001b202", outputs: ["Inputs","ct"], body: async () => {
-const [Inputs, ct] = await Promise.all([import("./_observablehq/stdlib/inputs.7e044bdc.js"), import("./_import/components/commit_times.07beffd1.js")]);
+const [Inputs, ct] = await Promise.all([import("./_observablehq/stdlib/inputs.e3eac48a.js"), import("./_import/components/commit_times.49586714.js")]);
 
 return {Inputs,ct};
 }});
@@ -149,7 +149,7 @@ Inputs.table(filteredCommits)
     <li class="observablehq-link observablehq-link-active"><a href="./git-data">Ben&#x27;s Git Data</a></li>
   </ol>
 </nav>
-<script>{const e=document.querySelector("#observablehq-sidebar"),t=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?t.checked=r==="true":t.indeterminate=!0;for(const o of document.querySelectorAll("#observablehq-sidebar summary")){const s=o.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${o.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<script>{const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
 <div id="observablehq-center">
 <aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
 <nav>
@@ -209,7 +209,7 @@ Inputs.table(filteredCommits)
 </main>
 <footer id="observablehq-footer">
 <nav><a rel="prev" href="./"><span>observable.bbkane.com</span></a></nav>
-<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2025-06-15T18:50:23">Jun 15, 2025</a>.</div>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2025-06-15T19:06:31">Jun 15, 2025</a>.</div>
 </footer>
 </div>
 </body>
