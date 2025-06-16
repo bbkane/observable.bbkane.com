@@ -13,7 +13,7 @@ SCRIPT_DIR = pathlib.Path(os.path.dirname(os.path.realpath(__file__)))
 with open(SCRIPT_DIR / "repos.json") as f:
     repo_data = json.load(f)
 
-writer = csv.writer(sys.stdout, delimiter="\t")
+writer = csv.writer(sys.stdout, delimiter=",")
 writer.writerow(["repo_name", "commit_time"])
 for repo_dir in repo_data.values():
     repo_dir = pathlib.Path(repo_dir).expanduser()

@@ -11,7 +11,7 @@ import * as ct from "./components/commit_times.js";
 
 ```js
 const repoData = FileAttachment("data/repos.json").json()
-const gitCommits = FileAttachment("data/git-commits.tsv").tsv({typed: true});
+const gitCommits = FileAttachment("data/git-commits.csv").csv({typed: true});
 ```
 
 A small analysis of the projects I work on and how I work on them. Most of these are public on [my GitHub](https://github.com/bbkane/). Some caveats to remember...
@@ -28,7 +28,6 @@ That said, I can definitely see patterns, so let's go! Use the checkboxes to fil
 
 ```js
 const allRepoNames = Object.keys(repoData)
-// const allRepoNames = ["dotfiles", "envelope", "fling", "go-zsh-complete", "grabbit", "journal", "shovel", "starghaze", "taggedmarks", "warg", "www.bbkane.com"];
 const filteredRepoNames = view(Inputs.checkbox(
     allRepoNames,
     {label: "Repo", value: allRepoNames},

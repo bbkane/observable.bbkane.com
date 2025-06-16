@@ -15,6 +15,7 @@ with open(SCRIPT_DIR / "repos.json") as f:
     repo_data = json.load(f)
 
 for repo_dir in repo_data.values():
+    print(f"Starting: {repo_dir}")
     repo_dir = pathlib.Path(repo_dir).expanduser()
     if not repo_dir.exists():
         raise SystemError(f"{repo_dir} does not exist")
