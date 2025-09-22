@@ -83,3 +83,13 @@ https://observablehq.com/d/d766ad521dd479d9
 For some reason, the observable plot lib doesn't like this? It doesn't like the fill property...
 
 Even though I see it in https://observablehq.com/plot/transforms/bin
+
+# Cache invalidation
+
+https://observablehq.com/framework/data-loaders#caching
+
+During preview: looks at the `mtime` of data loaders (./src/data/git-commits.csv.py) . `touch` the file to invalidate the cache
+
+During build: looks at `./src/.observablehq/cache/`. Delete that to invalidate the cache
+
+Because my data loader (git-commits.csv.py) reads a separate file (./src/data/repos.json), and that file isn't checked, the cache isn't invalidated when I add a repo to that file. So I need to manually invalidate the cache using one of the methods above. I'm going to update `npm run build` to auto-invalidate the cache.
