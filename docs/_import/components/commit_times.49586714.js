@@ -1,4 +1,4 @@
-import * as Plot from "../../_node/@observablehq/plot@0.6.17/index.716220a9.js";
+import * as Plot from "../../_node/@observablehq/plot@0.6.17/index.d66b1832.js";
 export function daysToCells(days) {
   const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let counter = {};
